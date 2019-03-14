@@ -31,6 +31,13 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#8f0222', GradientType=0 ); */
 }
 
+.qr{
+    position: relative;
+    width: 75px;
+    height: 75px;
+    margin:20px;
+    opacity: .8;
+}
 
 body {
     font-family: 'Raleway', sans-serif;
