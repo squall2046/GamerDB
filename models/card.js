@@ -1,7 +1,7 @@
 module.exports = function (sequelize, DataTypes) {
   var Card = sequelize.define("Card",
     {
-      UserId: {
+      User: {
         type: DataTypes.STRING(20),
         defaultValue: null
       },
