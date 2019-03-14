@@ -1,0 +1,173 @@
+<div class="row top" style="margin-top: -3px; width: 103%; position: fixed; z-index: 4; height: 130px; border-style:double; border-color: rgb(4, 184, 204);">
+    <div class="col-sm-3.5"
+        style="width: 250px; margin-top: 85px; margin-left: 26px; height: 30px; position: absolute">
+        <a href="/favorite" class="btn btn-primary" style=" background-color: transparent;border: 1px solid rgb(78, 156, 252); background-color: rgba(143, 54, 232, 0.377); color: rgb(208, 220, 255); border-radius: 0 0 0px 400px; height: 22px; font-size:9px; width: 60px; padding-left: 18px">Favorite</a>
+        <a href="/" class="btn btn-primary" style="background-color: transparent;border: 1px solid rgb(78, 156, 252); background-color: rgba(143, 54, 232, 0.377); color: rgb(208, 220, 255); border-radius: 0 0 400px 0px; height: 22px; font-size: 9px; width: 60px; padding-left: 0px">Home</a>
+    </div>
+    <div class="col-sm-2.5">
+        <a href="/" id="siteName"><i class="fas"
+            style="font-family: 'Monoton', cursive; padding: 30px; margin-top: -20px; margin-left: -10px; color: rgb(98, 106, 189); font-size: 80px">DB</i></a>
+        <a href="/" id="siteName"><i class="fas"
+            style="font-family: 'Monoton', cursive; padding: 30px; margin-left: -225px; color: rgb(255, 0, 174); font-size: 40px">Gamer</i></a>
+    </div>
+    <div class="wrap">
+        <div class="search searchGame" style="margin-left: 85%; position: absolute; margin-top: -40px">
+            <input class="input searchTerm" id="inputGame" type="text" placeholder="Game Name">
+            <button class="btn btn-primary searchButton" id="searchBtn" style="right: -50px; width: 40px; height: 36px;  background-color: transparent;border: 1px solid rgb(78, 156, 252); background-color: rgba(143, 54, 232, 0.377); color: rgb(208, 220, 255); text-align: center; color: #fff; border-radius: 5px; cursor: pointer; font-size: 15px"><i class="fa fa-search"></i></button>
+            <div class="searchRes" data-show="false">
+            </div>
+            {{!-- search result --}}
+        </div>
+    </div>
+    <div class="row" style="margin-top: 65px; width: 800px; padding-left: 13%; margin-left: 58%; margin-right: 30px; height: 30px; position: absolute">
+        <form class="sortForm" style="position: relative; ">
+            <select class="select" name="games" id="platform" style="width: 45%; font-size: 18px; background-color: transparent;border: 1px solid rgb(78, 156, 252); background-color: rgba(143, 54, 232, 0.377); color: rgb(208, 220, 255)">
+                <option value="">Platforms</option>
+                <option value="ps4">ps4</option>
+                <option value="xb1">XBox</option>
+                <option value="wiiu">WiiU</option>
+                <option value="3ds">3DS</option>
+            </select>
+            <select class="select" name="games" id="genre" style="width: 45%; font-size: 18px; background-color: transparent;border: 1px solid rgb(78, 156, 252); background-color: rgba(143, 54, 232, 0.377); color: rgb(208, 220, 255)">
+                <option value="">Genres</option>
+                <option value="act">Action</option>
+                <option value="rpg">RPG</option>
+                <option value="spt">Sport</option>
+                <option value="sht">Shooters</option>
+            </select>
+            <button type="submit" class="btn-success" id="sortBtn" style="background-color: transparent;border: 1px solid rgb(78, 156, 252); background-color: rgba(143, 54, 232, 0.377); color: rgb(208, 220, 255); font-size: 7px; width: 92%; height: 15px; position: absolute; margin-top: 29px; margin-left: -92%; border-radius: 0 0 600px 600px">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+    <hr>
+</div>
+<!-- ======================================= Body ======================================= -->
+<div class="row">
+    <div class="col-sm-12 row" style="margin-top: 200px">
+        <div class="col-sm-6 leftSide">
+            <img id="card-img" src="" alt="If there's no img, means the API search has reach to the limit in 30days">
+        </div>
+        <div class="col-sm-6 rightSide">
+            <dir class="gameList" style="margin-top: -30px">
+                {{#each game}}
+                <div class="cardC transition">
+                    <h1 class="transition" style="text-align: center">{{this.Name}}</h1><br> <br>
+                    <p>Year of Release: {{this.Year_of_Release}} <br>
+                        Platform: {{this.Platform}} <br>
+                        Genre: {{this.Genre}} <br>
+                        North America Sales: {{this.NA_Sales}} <br>
+                        Global Sales: {{this.Global_Sales}}
+                    </p>
+                    <p><button style="margin-top: 200px" class="favBtn btn-danger" data-gameId="{{this.id}}"
+                            data-favSta="{{this.isFav}}"><i class="fas fa-heart"></i></button></p>
+                    <div class="cta-container transition" style="margin-top: 20px">
+                    </div>
+                    <div class="my-rating jq-stars" style="margin-top: 150px; margin-left: 20px">
+                        Last Rating: <span id="rates"></span> </div>
+                </div>
+                {{/each}}
+            </dir>
+        </div>
+        <div id="description"></div>
+    </div>
+    {{!-- <div class="col-sm-12" style="opacity: 1"> --}}
+        {{#each game}}
+        {{!-- <div class="gameCard"> --}}
+            <div id="gameName" style="opacity: 0; position: absolute"> {{this.Name}}</div>
+            {{!-- <img style="opacity: 0; position: absolute" id="card-img" src=""
+                alt="If there's no img, means the API search has reach to the limit in 30days"> --}}
+        </div>
+        {{/each}}
+    </div>
+</div>
+<br>
+<hr style="box-shadow: 0px 0px 20px 5px  #3d0057; border-radius: 33%; margin-top: 48px; margin-bottom: 30px">
+<div class="row">
+    <div class="col-sm-12">
+        <div class="container">
+            <div type="text" class="comList">
+                <h4>Comments</h4>
+                <hr>
+
+                {{#each card}}
+                <div class="reply">
+                    # {{inc @index}}
+                    <i class="fas fa-user-circle" style="font-size: 40px;"></i> <strong>{{this.UserId}}</strong> <br>
+
+                    &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<i style="color: white">{{this.Comment}}</i> <br>
+                                    </div>
+
+                    <hr><br>
+                    {{/each}}
+            </div>
+            <form>
+                <div class="form-group">
+                    <label for="inputName">id</label>
+                    <input type="text" class="form-control" id="inputId" placeholder="name">
+                </div>
+                <div class="form-group">
+                    <label for="inputCom">textarea</label>
+                    <textarea class="form-control" id="inputCom" rows="3"></textarea>
+                </div>
+                {{#each game}}
+                <button type="submit" class="btn btn-primary mb-2" id="comBtn" data-id="{{this.id}}">Submit</button>
+                {{/each}}
+            </form>
+        </div>
+
+    </div>
+</div>
+<!-- ======================================= footer ======================================= -->
+<footer class="row top"
+    style="margin-top: 200px; width:104%; z-index: 4; border-style:double; border-color: rgb(4, 184, 204)">
+    <hr>
+    <div class="col-sm-6">
+        <li>Abdullah Alamri</li>
+        <li>James Lamb</li>
+        <li>Isaac Wu</li>
+    </div>
+    <div class="col-sm-6">
+        <br>
+        Copyright &copy; 2019
+    </div>
+</footer>
+<!-- ======================================= script ======================================= -->
+<script>
+    $("#comBtn").on("click", function () {
+        event.preventDefault();
+        var gameId = $(this).data("id");
+        var inputId = $("#inputId").val().trim();
+        var inputCom = $("#inputCom").val().trim();
+        if (inputId.length < 1 || inputCom.length < 1) {
+            alert("missing information")
+        } else {
+            $.ajax({
+                type: "POST",
+                url: "/card/comment/" + gameId,
+                data: { inputId: inputId, inputCom: inputCom }
+            }).then(
+                function (data) {
+                    location.reload();
+                })
+        }
+    })
+
+    $.ajax({
+        url: "/api/key",
+        method: "GET"
+    }).then(function (apiKey) {
+        var gameName = $("#gameName").text().split(' ').join('+').slice(1);
+        var queryURL = "https://api.mobygames.com/v1/games?title=" + gameName + "&api_key=" + apiKey.key;
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function (response) {
+            var image = $("#card-img");
+            image.attr("src", response.games[0].sample_cover.image);
+            $("#card-img").prepend(image);
+            $("#description").prepend('Description: " ' + response.games[0].description + ' "');
+        });
+    });
+
+</script>

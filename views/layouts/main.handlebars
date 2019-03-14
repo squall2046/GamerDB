@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Video Gamer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- style -->
+    <link rel="icon" type="image/png" href="#">
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/styles.css" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- CSS animation library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- CSS google font -->
+    <link href="https://fonts.googleapis.com/css?family=Monoton|Raleway" rel="stylesheet">    <!-- Link and activate WOW.js -->
+
+    <!-- ============================ Script =============================== -->
+    <!-- Link and activate WOW.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+    <script>new WOW().init();</script>
+    <!-- sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    {{{ body }}}
+    <script
+        type="text/javascript">"use strict"; var numberOfItems = $("#page .list-group").length, limitPerPage = 100; $("#page .list-group:gt(" + (limitPerPage - 1) + ")").hide(); var totalPages = Math.round(numberOfItems / limitPerPage); $(".pagination").append("<li class='current-page active'><a class='page-link' href='javascript:void(0)'>1</a></li>"); for (var i = 2; i <= totalPages; i++)$(".pagination").append("<li class='current-page'><a class='page-link' href='javascript:void(0)'>" + i + "</a></li>"); $(".pagination").append("<li id='next-page'><a class='page-link' href='javascript:void(0)' aria-label=Next><span aria-hidden=true>&raquo;</span></a></li>"), $(".pagination li.current-page").on("click", function () { if ($(this).hasClass("active")) return !1; var a = $(this).index(); $(".pagination li").removeClass("active"), $(this).addClass("active"), $("#page .list-group").hide(); for (var i = limitPerPage * a, e = i - limitPerPage; e < i; e++)$("#page .list-group:eq(" + e + ")").show() }), $("#next-page").on("click", function () { var a = $(".pagination li.active").index(); if (a === totalPages) return !1; a++ , $(".pagination li").removeClass("active"), $("#page .list-group").hide(); for (var i = limitPerPage * a, e = i - limitPerPage; e < i; e++)$("#page .list-group:eq(" + e + ")").show(); $(".pagination li.current-page:eq(" + (a - 1) + ")").addClass("active") }), $("#previous-page").on("click", function () { var a = $(".pagination li.active").index(); if (1 === a) return !1; a-- , $(".pagination li").removeClass("active"), $("#page .list-group").hide(); for (var i = limitPerPage * a, e = i - limitPerPage; e < i; e++)$("#page .list-group:eq(" + e + ")").show(); $(".pagination li.current-page:eq(" + (a - 1) + ")").addClass("active") });</script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    <script src="/js/jquerysrs.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

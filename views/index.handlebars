@@ -1,0 +1,111 @@
+<div class="row top" style="margin-top: -3px; width: 103%; position: fixed; z-index: 4; height: 130px; border-style:double; border-color: rgb(4, 184, 204);">
+    <div class="col-sm-3.5"
+        style="width: 250px; margin-top: 85px; margin-left: 26px; height: 30px; position: absolute">
+        <a href="/favorite" class="btn btn-primary" style=" background-color: transparent;border: 1px solid rgb(78, 156, 252); background-color: rgba(143, 54, 232, 0.377); color: rgb(208, 220, 255); border-radius: 0 0 0px 400px; height: 22px; font-size:9px; width: 60px; padding-left: 18px">Favorite</a>
+        <a href="/" class="btn btn-primary" style="background-color: transparent;border: 1px solid rgb(78, 156, 252); background-color: rgba(143, 54, 232, 0.377); color: rgb(208, 220, 255); border-radius: 0 0 400px 0px; height: 22px; font-size: 9px; width: 60px; padding-left: 0px">Home</a>
+    </div>
+    <div class="col-sm-2.5">
+        <a href="/" id="siteName"><i class="fas"
+            style="font-family: 'Monoton', cursive; padding: 30px; margin-top: -20px; margin-left: -10px; color: rgb(98, 106, 189); font-size: 80px">DB</i></a>
+        <a href="/" id="siteName"><i class="fas"
+            style="font-family: 'Monoton', cursive; padding: 30px; margin-left: -225px; color: rgb(255, 0, 174); font-size: 40px">Gamer</i></a>
+    </div>
+    <div class="wrap">
+        <div class="search searchGame" style="margin-left: 85%; position: absolute; margin-top: -40px">
+            <input class="input searchTerm" id="inputGame" type="text" placeholder="Game Name">
+            <button class="btn btn-primary searchButton" id="searchBtn" style="right: -50px; width: 40px; height: 36px;  background-color: transparent;border: 1px solid rgb(78, 156, 252); background-color: rgba(143, 54, 232, 0.377); color: rgb(208, 220, 255); text-align: center; color: #fff; border-radius: 5px; cursor: pointer; font-size: 15px"><i class="fa fa-search"></i></button>
+            <div class="searchRes" data-show="false">
+            </div>
+            {{!-- search result --}}
+        </div>
+    </div>
+    <div class="row" style="margin-top: 65px; width: 800px; padding-left: 13%; margin-left: 58%; margin-right: 30px; height: 30px; position: absolute">
+        <form class="sortForm" style="position: relative; ">
+            <select class="select" name="games" id="platform" style="width: 45%; font-size: 18px; background-color: transparent;border: 1px solid rgb(78, 156, 252); background-color: rgba(143, 54, 232, 0.377); color: rgb(208, 220, 255)">
+                <option value="">Platforms</option>
+                <option value="ps4">ps4</option>
+                <option value="xb1">XBox</option>
+                <option value="wiiu">WiiU</option>
+                <option value="3ds">3DS</option>
+            </select>
+            <select class="select" name="games" id="genre" style="width: 45%; font-size: 18px; background-color: transparent;border: 1px solid rgb(78, 156, 252); background-color: rgba(143, 54, 232, 0.377); color: rgb(208, 220, 255)">
+                <option value="">Genres</option>
+                <option value="act">Action</option>
+                <option value="rpg">RPG</option>
+                <option value="spt">Sport</option>
+                <option value="sht">Shooters</option>
+            </select>
+            <button type="submit" class="btn-success" id="sortBtn" style="background-color: transparent;border: 1px solid rgb(78, 156, 252); background-color: rgba(143, 54, 232, 0.377); color: rgb(208, 220, 255); font-size: 7px; width: 92%; height: 15px; position: absolute; margin-top: 29px; margin-left: -92%; border-radius: 0 0 600px 600px">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+    <hr>
+</div>
+<!-- ======================================= Body ======================================= -->
+<div class="row" id="page">
+    <div style="z-index: 1; margin-top: 140px; margin-left: 20px; font-family: 'Raleway', sans-serif">
+        <div class="col-sm-4">
+            <form class="orderForm" style="width: 150px;">
+                <select class="select" name="games" id="gameOrder" style="width: 130px; margin-left: 20px; font-size: 18px; background-color: transparent;border: 1px solid rgb(78, 156, 252); background-color: rgba(23, 10, 255, 0.589); color: rgb(208, 220, 255)">
+                    <option value="">Order by</option>
+                    <option value="yd">Year Desc</option>
+                    <option value="ya">Year Asc</option>
+                    <option value="sd">Sales Desc</option>
+                    <option value="sa">Sales Asc</option>
+                </select>
+                <button type="submit" class="btn-success" id="orderBtn" style="background-color: transparent; border: 1px solid rgb(78, 156, 252); background-color: rgba(23, 10, 255, 0.589); color: rgb(208, 220, 255); font-size: 12px; position: absolute; margin-top: 28px; margin-left: -129px; width: 128px; height: 16px; font-size: 8px; border-radius: 0 0 400px 400px;">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+    <hr style="box-shadow: 0px 0px 20px 5px  #3d0057; border-radius: 33%; margin-top: 70px; margin-bottom: 30px">
+        <div class="col-sm-4 navNo" style="margin-left: 50px; margin-top: -20px; margin-right: auto; position: absolute">
+            <nav aria-label="bootstrap" style="">
+                <ul class="pagination" style="">
+                    <li class="page-item" id="previous-page" style="">
+                        <a class="page-link" aria-label="Previous" style="background-color: transparent; border: 1px solid rgb(78, 156, 252); background-color: rgba(23, 10, 255, 0.589); color: rgb(208, 220, 255)"><span aria-hidden="true">&laquo;</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        {{!-- games loop --}}
+        <dir class="gameList">
+            {{#each game}}
+            <div class="list-group" id="gameCard">
+                <div class="card transition">
+                    <h2 class="transition">{{this.Name}}</h2>
+                    <p>Year of Release: {{this.Year_of_Release}} <br> Platform: {{this.Platform}} </p>
+                    <div class="cta-container transition" style="margin-top: 380px">
+                        <button class="favBtn btn-danger" data-gameId="{{this.id}}" data-favSta="{{this.isFav}}">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="cta-container transition">
+                        <a href="/card/{{this.id}}" class="cta cardBtn">More Details</a>
+                    </div>
+                    <div class="card_circle transition"></div>
+                </div>
+            </div>
+            {{/each}}
+        </dir>
+    </div>
+</div>
+<!-- ======================================= footer ======================================= -->
+<footer class="row top"
+    style="margin-top: 200px; width:104%; z-index: 4; border-style:double; border-color: rgb(4, 184, 204)">
+    <hr>
+    <div class="col-sm-6">
+        <li>Abdullah Alamri</li>
+        <li>James Lamb</li>
+        <li>Isaac Wu</li>
+    </div>
+    <div class="col-sm-6">
+        <br>
+        Copyright &copy; 2019
+    </div>
+</footer>
+<!-- ======================================= script ======================================= -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+</script>

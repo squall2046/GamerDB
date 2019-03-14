@@ -1,0 +1,547 @@
+
+/* .navbarSprite { */
+    /* background-color: transparent; */
+    /* background-color: rgb(0, 89, 255); */
+    /* background-image: url(/images/G/01/imdb/images/navbar/navbar_sprite-2407329821._V_.png); */
+    /* background-attachment: scroll; */
+    /* background-repeat: no-re */
+/* } */
+
+.top {
+    background: rgb(5, 5, 74);
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 60px;
+    margin-bottom: 0px;
+    margin-left: -10px;
+    margin-right: -0px;
+    padding-left: 30px;
+    padding-top: 1px;
+    padding-bottom: 20px;
+    -webkit-box-shadow: inset -4px -29px 23px -17px rgba(0,0,0,1);
+    -moz-box-shadow: inset -4px -29px 23px -17px rgba(0,0,0,1);
+    box-shadow: inset -4px -29px 23px -17px rgb(0, 64, 160);
+    /* background: rgba(169,3,41,1);
+    background: -moz-linear-gradient(top, rgba(169,3,41,1) 0%, rgba(109,0,25,1) 29%, rgba(143,2,34,1) 80%, rgba(143,2,34,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(169,3,41,1)), color-stop(29%, rgba(109,0,25,1)), color-stop(80%, rgba(143,2,34,1)), color-stop(100%, rgba(143,2,34,1)));
+    background: -webkit-linear-gradient(top, rgba(169,3,41,1) 0%, rgba(109,0,25,1) 29%, rgba(143,2,34,1) 80%, rgba(143,2,34,1) 100%);
+    background: -o-linear-gradient(top, rgba(169,3,41,1) 0%, rgba(109,0,25,1) 29%, rgba(143,2,34,1) 80%, rgba(143,2,34,1) 100%);
+    background: -ms-linear-gradient(top, rgba(169,3,41,1) 0%, rgba(109,0,25,1) 29%, rgba(143,2,34,1) 80%, rgba(143,2,34,1) 100%);
+    background: linear-gradient(to bottom, rgba(169,3,41,1) 0%, rgba(109,0,25,1) 29%, rgba(143,2,34,1) 80%, rgba(143,2,34,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#8f0222', GradientType=0 ); */
+}
+
+
+body {
+    font-family: 'Raleway', sans-serif;
+    /* background: -webkit-linear-gradient(90deg, #00b7ff 10%, #DD2476 90%); 
+    background:    -moz-linear-gradient(90deg, #00aaee 10%, #DD2476 90%); 
+    background:     -ms-linear-gradient(90deg, #00aaee 10%, #DD2476 90%); 
+    background:      -o-linear-gradient(90deg, #00aaee 10%, #DD2476 90%); 
+    background:         linear-gradient(90deg, #00aaee 10%, #DD2476 90%);  */
+    background: rgba(0,0,255,1);
+    background: -moz-linear-gradient(left, rgb(84, 84, 176) 0%, rgba(214,62,173,1) 51%, rgba(214,62,173,1) 56%, rgba(90,17,233,1) 88%, rgb(84, 84, 176) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,255,1)), color-stop(51%, rgba(214,62,173,1)), color-stop(56%, rgba(214,62,173,1)), color-stop(88%, rgba(90,17,233,1)), color-stop(100%, rgba(43,0,255,1)));
+    background: -webkit-linear-gradient(left, rgb(84, 84, 176) 0%, rgba(214,62,173,1) 51%, rgba(214,62,173,1) 56%, rgba(90,17,233,1) 88%, rgb(84, 84, 176) 100%);
+    background: -o-linear-gradient(left, rgb(84, 84, 176) 0%, rgba(214,62,173,1) 51%, rgba(214,62,173,1) 56%, rgba(90,17,233,1) 88%, rgb(84, 84, 176) 100%);
+    background: -ms-linear-gradient(left, rgb(84, 84, 176) 0%, rgba(214,62,173,1) 51%, rgba(214,62,173,1) 56%, rgba(90,17,233,1) 88%, rgb(84, 84, 176) 100%);
+    background: linear-gradient(to right, rgb(84, 84, 176) 0%, rgba(214,62,173,1) 51%, rgba(214,62,173,1) 56%, rgba(90,17,233,1) 88%, rgb(84, 84, 176) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000ff', endColorstr='#2b00ff', GradientType=1 );
+    
+}
+
+#siteName {
+    margin-left: 0px;
+    font-size: 200%;
+    color: rgb(177, 43, 204);
+  }
+.transition { 
+    transition: .3s cubic-bezier(.3, 0, 0, 1.3);
+}
+
+/* search bar */
+
+
+.search {
+    height: 20px;
+    width: 100%;
+    position: relative;
+    margin-top: -50px;
+    float: right;
+    padding-left: -100px;
+  }
+  
+  .searchTerm {
+    float: left;
+    width: 100%;
+    border: 3px solid rgb(107, 129, 250);
+    padding: 15px;
+    height: 20px;
+    border-radius: 5px;
+    outline: none;
+    color: #9DBFAF;
+  }
+  
+  .searchTerm:focus{
+    color: #00B4CC;
+  }
+  
+  .searchButton {
+    position: absolute;  
+    right: -50px;
+    width: 40px;
+    height: 36px;
+    border: 1px solid #00B4CC;
+    background: rgb(52, 82, 250);
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  .row h2 {
+    font-family: 'Raleway', sans-serif;
+    color: rgb(4, 4, 169);
+    text-shadow: 1px 1px 30px  #ce0000;
+  }
+  
+  /*Resize the wrap to see the search bar change!*/
+  .wrap{
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* ============end search bar ============ */
+.card {
+    /* background-image: url(https://www.swishschool.com/u/up2/2013-1/1377421516811.jpg); */
+    background-image: url(https://ak2.picdn.net/shutterstock/videos/12864692/thumb/1.jpg);
+    background-size: 400px 300px;
+    position: relative;
+    float: left;
+    bottom: 0;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
+    height: 300px;
+    left: 0;
+    margin: 40px;
+    margin-bottom: 80px;
+    overflow: hidden;
+    right: 0;
+    top: 0;
+    width: 300px;
+    border-radius: 10%;
+    box-shadow:  0px 30px 20px 10px rgba(3, 0, 41, 0.694);
+    text-shadow: 1px 1px 2px  #2b2b2b;
+}
+
+.cardC {
+    background-image: url(https://ak2.picdn.net/shutterstock/videos/12864692/thumb/1.jpg);
+
+    background-size: 100% 400px;
+    float: left;
+    bottom: 0;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
+    width: 100%;
+    height: 400px;
+    left: 0;
+    margin: 20px;
+    margin-left: -10px;
+    margin-bottom: 80px;
+    overflow: hidden;
+    position: relative;
+    right: 0;
+    top: 0;
+    border-radius: 3px;
+    box-shadow:  0px 30px 20px 10px rgba(3, 0, 41, 0.694);
+    text-shadow: 1px 1px 2px  #2b2b2b;
+
+
+}
+.cardC p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    z-index: 1;
+}
+.card p {
+    margin-top: 230px;
+    margin-left: 70px;
+}
+/* body of the cards after hover ليتم اضافة كلمات كثيرة */
+.card:hover {
+    height: 500px;
+    width: 300px;
+    z-index: 1;
+    background-size: 400px 260px;
+
+    
+}
+/* button for details */
+.card:hover .cta-container {
+    display: inline;
+    margin-top: 430px;
+}
+
+/* game picture hover */
+.card:hover .card_circle {
+    background-size: 500px;
+    border-radius: 0%;
+    margin-top: -120px;
+    box-shadow:   0px 0px 20px 10px  #716bd7;
+    background-size: 450px 300px;
+
+
+}
+.card:hover .card_circle_fav{
+    box-shadow:   0px 0px 20px 10px  #d76b6b;
+
+}
+
+.card:hover h2 {
+    background: #0049a9;
+    color: #fff;
+    margin-top: 100px;
+    padding: 5px;
+    box-shadow:  0px 0px 20px 10px rgba(3, 0, 41, 0.694);
+
+}
+
+/* .card:hover h2 small { 
+    color: #fff;
+} */
+
+/* game info. black color */
+
+.card:hover p { 
+    margin-top: 300px;
+}
+.page-link {
+    border-radius: 0% 0 20% 20% ;
+    background-color: transparent;
+    border: 1px solid rgb(78, 156, 252)! important; 
+    background-color: rgba(23, 10, 255, 0.589)! important; 
+    color: rgb(208, 220, 255)! important; 
+    font-size: 15px;
+    
+}
+
+/* game picture */
+.card_circle {
+    background: url(https://cdn.gearnuke.com/wp-content/uploads/2018/12/smash-bros-ultimate-4.jpg) no-repeat center bottom;
+    /* background: url('http://static1.squarespace.com/static/554a451ee4b00f74faae5e23/554ad044e4b05e007887777f/58ecc201725e25240ed58825/1491911809009/Zelda+BOTW+BitBloggist.jpg?format=1500w') no-repeat center bottom; */
+    background-color: #3487f7;
+    background-size: 300px 130px;
+    border-radius: 50%;
+    border: 1px black solid;
+    box-shadow:  inset 0px 0px 15px 10px  #716bd7;
+    height: 400px;
+    margin-left: -75px;
+    margin-top: -280px;
+    position: absolute;
+    width: 450px;
+}
+.card_circle_fav {
+    box-shadow:  inset 0px 0px 15px 10px  #d76b6b;
+    
+
+}
+.card h2 {
+    color: #1d1b94;
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    font-weight: 200;
+    margin-top: 130px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 9999;
+    font-weight: bold;
+    text-shadow: 0px 1px 0px rgba(255, 190, 190, 0.509), 0px -1px 0px rgba(0,0,0,.7);
+
+}
+
+
+p {
+    color: rgba(0,0,0,.6);
+    margin-left: 50px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    margin-top: 200px;
+    position: absolute;
+    text-align: center;
+    z-index: 9999;
+}
+
+
+.card:hover .p_fav{
+    padding-top: 120px;
+
+}
+.cta-container {
+    display: none;
+    margin-top: 320px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 9999;
+}
+.cta {
+    -moz-border-radius: 2px;
+    -moz-transition: 0.2s ease-out;
+    -ms-transition: 0.2s ease-out;
+    -o-transition: 0.2s ease-out;
+    -webkit-border-radius: 2px;
+    -webkit-transition: 0.2s ease-out;
+    background-clip: padding-box;
+    border: 2px solid #3487f7;
+    border-radius: 2px;
+    color: #3487f7;
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    height: 36px;
+    letter-spacing: 0.5px;
+    line-height: 36px;
+    margin-bottom: 15px;
+    padding: 0 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.2s ease-out;
+}
+
+/* <this> */
+.cta:hover {
+    background-color: #002a61;
+    box-shadow: 0 8px 17px 0 rgba(0, 30, 255, 0.2), 0 6px 20px 0 rgba(0, 30, 255, 0.2);
+    color: #fff;
+    -moz-box-shadow: 0 8px 17px 0 rgba(0, 30, 255, 0.2), 0 6px 20px 0 rgba(0, 30, 255, 0.2);
+    -webkit-box-shadow: 0 8px 17px 0 rgba(0, 30, 255, 0.2), 0 6px 20px 0 rgba(0, 30, 255, 0.2);
+}
+
+#gameCard {
+    position: relative;
+    float: left;
+}
+
+#card-img {
+    float: left;
+    margin-top: -60px;
+    margin-left: 20px;
+    margin-bottom: 90px;
+    max-height: 550px;
+    max-width: 700px;
+    width: 90%;
+    height: 520px;
+    box-shadow:  0px 30px 20px 10px rgba(3, 0, 41, 0.694);
+    text-shadow: 1px 1px 2px  #2b2b2b;
+    border-radius: 3px
+
+    /* box-shadow:  -15px 0px 20px 10px rgb(120, 0, 0); */
+
+
+}
+
+.cardBtn {    
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    background-color: transparent; 
+    border: 1px solid rgb(4, 61, 131); 
+    background-color: rgba(13, 0, 255, 0.589); 
+    color: rgb(208, 220, 255); 
+    font-size: 15px; 
+    border-radius: 20px 20px 400px 400px;
+    text-shadow: 1px 1px 30px  #ce0000;
+
+
+}
+.cardBtn:hover {
+    font-size: 16px;
+    background-color: transparent; 
+    border: 1px solid rgb(4, 61, 131); 
+    background-color: rgba(9, 0, 174, 0.747); 
+    color: rgb(208, 220, 255); 
+}
+
+.btn-danger{
+    border-radius: 400px 400px 10px 10px;
+    width: 130px;
+    height: 29px;
+    margin-top: 20px;
+}
+
+.btn-danger:hover{
+    font-size: 18px
+}
+.btn-danger:active {
+    margin-top: 22px;
+    background: rgb(255, 47, 0)
+}
+
+.unFavBtn {
+    width: 130px;
+    height: 29px;
+    margin-top: 3px;
+    background-color: rgb(176, 0, 0);
+    font-size: 16px;
+    border: 1px solid rgb(4, 61, 131); 
+    color: rgb(208, 220, 255); 
+    border-radius: 400px 400px 10px 10px;
+
+}
+.unFavBtn:hover {
+    text-shadow: 1px 1px 20px  #ce0000;
+
+    font-size: 20px
+}
+.unFavBtn:active {
+    margin-top: 7px;
+    background: rgb(255, 47, 0)
+}
+
+
+
+/* #card-img {
+    float: left;
+    margin-top: 150px;
+    margin-left: 50px;
+    margin-right: 50px;
+    max-height: 550px;
+max-width: 700px;
+width: 400px;
+height: 420px;
+
+} */
+
+/* margin-left= auto; margin-right: auto; width: 70% */
+#description {
+    padding: 40px;
+    background: rgba(88, 16, 94, 0.578);
+    margin-left: 8%;
+    margin-right: 6%;
+    margin-top: 70px;
+    width: 100%;
+    text-align: justify;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    box-shadow:  0px 0px 20px 10px rgba(0, 0, 0, 0.762);
+    text-shadow: 1px 1px 10px  #100000;
+
+    color: white;
+    border-radius: 10px;
+}
+.reply {
+    padding: 25px;
+    background: rgba(189, 189, 189, 0.578);
+    margin-left: 3%;
+    margin-right: 6%;
+    margin-top: 0px;
+    width: 90%;
+    text-align: justify;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    box-shadow:  0px 0px 20px 10px rgba(0, 0, 0, 0);
+    text-shadow: 1px 1px 10px  #100000;
+
+    color: white;
+    border-radius: 2px;
+}
+/* ================= stars ================= */
+.jq-stars {
+    display: inline-block;
+}
+
+.jq-rating-label {
+    font-size: 22px;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    font-family: 'Raleway', sans-serif;
+}
+
+.jq-star {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.jq-star-svg {
+    padding-left: 3px;
+    width: 100%;
+    height: 100% ;
+}
+
+.jq-star:hover .fs-star-svg path {
+}
+
+.jq-star-svg path {
+    /* stroke: #000; */
+    stroke-linejoin: round;
+}
+
+/* un-used */
+.jq-shadow {
+    -webkit-filter: drop-shadow( -2px -2px 2px #888 );
+    filter: drop-shadow( -2px -2px 2px #888 );
+}
+/* ================= stars ================= */
+
+/* Hi Abdullah, here is the working search result */
+.searchStyle {
+    background-image: url(https://ak2.picdn.net/shutterstock/videos/12864692/thumb/1.jpg);
+    /* background-size: 140%; */
+    background-size: 400px 390px;
+    position: fixed;
+    float: left;
+    width: 400px;
+    height: 400px;
+    left: 0%;
+    text-align: center;
+    border: solid 1px;
+    border-radius: 10px;
+    color: black;
+    z-index: 10;
+    box-shadow: 10px 10px 130px  #000000;
+    /* padding-bottom: 100px; */
+    border: 1px rgb(128, 0, 0) solid;
+    display:block;
+    opacity:2;
+
+  }
+
+  #searchOff {
+    position: absolute;
+    width: 34px;
+    height: 35px;
+    margin-top: -90px;
+    margin-left: 140px;
+    font-size: 20px;
+    color: red; 
+    background: rgba(255, 0, 0, 0);
+    border: 1px rgba(255, 0, 0, 0.171) solid;
+    border-radius: 50%;
+}
+
+#btn-fav-search {
+    position: absolute;
+    margin-left: -199px;
+    margin-top: 292px;
+    width: 399px;
+    border-radius: 0px 0px 40px 40px;
+    height: 35px;
+    border-bottom: 2px red solid;
+    border-top: 2px red solid;
+
+
+}
+#btn-fav-search:active {
+    height: 29px;
+}
