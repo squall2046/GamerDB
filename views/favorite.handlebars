@@ -1,8 +1,7 @@
-<div class="row top" style="margin-top: -3px; width: 103%; position: fixed; z-index: 4; height: 130px; border-style:double; border-color: rgb(4, 184, 204);">
-    <div class="col-sm-3.5"
-        style="width: 250px; margin-top: 85px; margin-left: 26px; height: 30px; position: absolute">
-        <a href="/favorite" class="btn btn-primary" style=" background-color: transparent;border: 1px solid rgb(78, 156, 252); background-color: rgba(143, 54, 232, 0.377); color: rgb(208, 220, 255); border-radius: 0 0 0px 400px; height: 22px; font-size:9px; width: 60px; padding-left: 18px">Favorite</a>
-        <a href="/" class="btn btn-primary" style="background-color: transparent;border: 1px solid rgb(78, 156, 252); background-color: rgba(143, 54, 232, 0.377); color: rgb(208, 220, 255); border-radius: 0 0 400px 0px; height: 22px; font-size: 9px; width: 60px; padding-left: 0px">Home</a>
+<div class="row top">
+    <div class="col-sm-3.5 f-h-icon">
+        <a href="/favorite" class="btn btn-primary" id="favorite-icon">Favorite</a>
+        <a href="/" class="btn btn-primary" id="home-icon">Home</a>
     </div>
     <div class="col-sm-2.5">
         <a href="/" id="siteName"><i class="fas"
@@ -11,49 +10,62 @@
             style="font-family: 'Monoton', cursive; padding: 30px; margin-left: -225px; color: rgb(255, 0, 174); font-size: 40px">Gamer</i></a>
     </div>
     <div class="wrap">
-        <div class="search searchGame" style="margin-left: 85%; position: absolute; margin-top: -40px">
+        <div class="search">
             <input class="input searchTerm" id="inputGame" type="text" placeholder="Game Name">
-            <button class="btn btn-primary searchButton" id="searchBtn" style="right: -50px; width: 40px; height: 36px;  background-color: transparent;border: 1px solid rgb(78, 156, 252); background-color: rgba(143, 54, 232, 0.377); color: rgb(208, 220, 255); text-align: center; color: #fff; border-radius: 5px; cursor: pointer; font-size: 15px"><i class="fa fa-search"></i></button>
+            <button class="btn btn-primary searchButton" id="searchBtn"><i class="fa fa-search"></i></button>
             <div class="searchRes" data-show="false">
             </div>
             {{!-- search result --}}
         </div>
     </div>
-    <div class="row" style="margin-top: 65px; width: 800px; padding-left: 13%; margin-left: 58%; margin-right: 30px; height: 30px; position: absolute">
-        <form class="sortForm" style="position: relative; ">
-            <select class="select" name="games" id="platform" style="width: 45%; font-size: 18px; background-color: transparent;border: 1px solid rgb(78, 156, 252); background-color: rgba(143, 54, 232, 0.377); color: rgb(208, 220, 255)">
+    <div class="row" id="selectSort">
+        <form class="sortForm">
+            <select class="select" name="games" id="platform">
                 <option value="">Platforms</option>
-                <option value="ps4">ps4</option>
+                <option value="ps4">PS4</option>
                 <option value="xb1">XBox</option>
                 <option value="wiiu">WiiU</option>
                 <option value="3ds">3DS</option>
             </select>
-            <select class="select" name="games" id="genre" style="width: 45%; font-size: 18px; background-color: transparent;border: 1px solid rgb(78, 156, 252); background-color: rgba(143, 54, 232, 0.377); color: rgb(208, 220, 255)">
+            <select class="select" name="games" id="genre">
                 <option value="">Genres</option>
                 <option value="act">Action</option>
                 <option value="rpg">RPG</option>
                 <option value="spt">Sport</option>
                 <option value="sht">Shooters</option>
             </select>
-            <button type="submit" class="btn-success" id="sortBtn" style="background-color: transparent;border: 1px solid rgb(78, 156, 252); background-color: rgba(143, 54, 232, 0.377); color: rgb(208, 220, 255); font-size: 7px; width: 92%; height: 15px; position: absolute; margin-top: 29px; margin-left: -92%; border-radius: 0 0 600px 600px">
+            <button type="submit" class="btn-success" id="sortBtn">
                 <i class="fa fa-search"></i>
             </button>
         </form>
+        <div class="col-sm-12">
+            <form class="orderForm">
+                <select class="select" name="games" id="gameOrder">
+                    <option value="">Order by</option>
+                    <option value="yd">Year Desc</option>
+                    <option value="ya">Year Asc</option>
+                    <option value="sd">Sales Desc</option>
+                    <option value="sa">Sales Asc</option>
+                </select>
+                <button type="submit" class="btn-success" id="orderBtn">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+
     </div>
     <hr>
 </div>
 <!-- ======================================= Body ======================================= -->
 <div class="row">
-    <div class="col-sm-12"
-        style="z-index: 1; margin-top: 150px; margin-left: 5px; font-family: 'Raleway', sans-serif; ">
-        <h2>Favorite List</h2>
-            <hr style="box-shadow: 0px 0px 20px 5px  #3d0057; border-radius: 33%; margin-top: 48px; margin-bottom: 30px">
-
+    <div class="col-sm-12 fav-top">
+        <h2 id="m-f-c">&nbsp;&nbsp;&nbsp;&nbsp;Favorite List</h2>
+            <hr id="line-f">
         <dir class="gameList">
             {{#each fav}}
             <div class="card transition card_fav">
                 <h2 class="transition">{{this.Name}}</h2>
-                <p class="p_fav" style="font-size: 14px; margin-left: 65px; margin-top: 180px">
+                <p class="p_fav" id="p_fav">
                     Year of Release: {{this.Year_of_Release}} <br>
                     Platform: {{this.Platform}} <br>
                     Genre: {{this.Genre}} <br>
@@ -61,10 +73,10 @@
                     Global Sales: {{this.Global_Sales}}
                 </p>
                 <div class="my-rating jq-stars">Last Rating: <span id="rates"></span></div>
-                <div class="cta-container transition" style="margin-top: 415px">
+                <div class="cta-container transition" id="fav-fav">
                     <button class="unFavBtn" data-gameId="{{this.GameId}}"><i class="fas fa-times"></i></button><br>
                 </div>
-                <div class="cta-container transition" style="margin-top: 450px">
+                <div class="cta-container transition" id="fav-details">
                     <a href="/card/{{this.GameId}}" class="cta cardBtn">More Details</a>
                 </div>
                 <div class="card_circle transition card_circle_fav"></div>
@@ -74,17 +86,16 @@
     </div>
 </div>
 <!-- ======================================= footer ======================================= -->
-<footer class="row top"
-    style="margin-top: 200px; width:104%; z-index: 4; border-style:double; border-color: rgb(4, 184, 204)">
+<footer class="row footer">
     <hr>
     <div class="col-sm-6">
+        &nbsp;&nbsp; Copyright &copy; 2019 <hr>
         <li>Abdullah Alamri</li>
         <li>James Lamb</li>
         <li>Isaac Wu</li>
     </div>
-    <div class="col-sm-6">
-        <br>
-        Copyright &copy; 2019
+    <div class="col-sm-6" id="powered">
+        Powered By: "moby games" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </div>
 </footer>
 <!-- ======================================= script ======================================= -->

@@ -10,16 +10,18 @@ $(document).ready(function () {
         } else {
             $.get("/input/" + input).then(function (data) {
                 $(".searchRes").html(
+
                     '<div class="searchStyle">' +
+                    '<button id="searchOff"><i class="fas fa-times"></i> </button>' +
+
                     '<h2 class="transition" style="margin-top: 50px; margin-left: auto; margin-right: auto; width: 100%; ">' + data.Name + '</h2>' +
                     '<p style="margin-top: 50px; margin-left: auto; margin-right: auto; width: 100%; ">' + 'Year of Release: ' + data.Year_of_Release + '<br> Platform: ' + data.Platform  + '<br>  Genre: ' + data.Genre + '<br> North America Sales: ' + data.NA_Sales + '<br> Global Sales: ' + data.Global_Sales + '</p>' +
                     '<div class="my-rating jq-stars"></div>' +
                     '<button class="favBtn btn-danger" id="btn-fav-search" data-gameId="' + data.id + '" data-favSta="' + data.isFav + '">' +
                     '<i class="fas fa-heart">' + '</i>' +
                     '</button>' +
-                    '<div class="cta-container transition"><a href="/card/' + data.id + '"' + 
+                    '<div class="cta-container transition searchDetails"><a href="/card/' + data.id + 
                     '" class="cta cardBtn">More Details</a></div>' +
-                    '<button id="searchOff"> <i class="fas fa-times"></i> </button>' +
                     '</div>'
 
                     //=====( Isaac, this is your search bar code )=====//
