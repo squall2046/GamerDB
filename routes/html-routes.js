@@ -327,7 +327,7 @@ module.exports = function (app) {
 
     app.post("/card/comment/:id", function (req, res) {
         db.Card.create({
-            UserId: req.body.inputId,
+            User: req.body.inputId,
             Comment: req.body.inputCom,
             GameId: req.params.id
         })
